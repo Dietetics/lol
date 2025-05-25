@@ -4,9 +4,9 @@ pages:
   script:
     - npm install
     - npm run build
-    - mv dist public2
+    - mv dist public
   artifacts:
     paths:
-      - public2
+      - public
   only:
     - main
