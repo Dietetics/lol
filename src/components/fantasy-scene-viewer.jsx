@@ -4,19 +4,10 @@ import styles from "../styles/FantasySceneViewer.module.css";
 
 export default function FantasySceneViewer() {
     const [isHovered, setIsHovered] = useState(false);
-    const [isDoorOpening, setIsDoorOpening] = useState(false);
-    const [showScene, setShowScene] = useState(false);
 
     const handleMouseEnter = () => {
-        if (!isHovered && !isDoorOpening) {
+        if (!isHovered) {
             setIsHovered(true);
-            setIsDoorOpening(true);
-            
-            // Show scene after door starts opening
-            setTimeout(() => {
-                setShowScene(true);
-            }, 1500);
-            
             window.dispatchEvent(
                 new CustomEvent("hoverAreaEntered", {
                     detail: { area: "fantasy-chamber-detail" },
@@ -55,18 +46,8 @@ export default function FantasySceneViewer() {
                     alt="Fantasy scene"
                     className={`${styles.sceneImage} ${styles.transitionFantasy} ${
                         isHovered ? styles.fantasyGlow : ""
-                    } ${showScene ? styles.sceneRevealAnimation : ""}`}
+                    }`}
                 />
-
-                {/* Door overlay */}
-                {!showScene && (
-                    <div className={`${styles.doorOverlay} ${isDoorOpening ? styles.doorOpenAnimation : ""}`}>
-                        <div className={styles.doorHandle}></div>
-                    </div>
-                )}
-
-                {/* Light beam effect */}
-                <div className={`${styles.lightBeam} ${isDoorOpening ? styles.lightBeamAnimation : ""}`}></div>
 
                 {/* Focus overlay for blur effect */}
                 <div className={`${styles.focusOverlay} ${isHovered ? styles.fantasyGlow : ''}`}></div>
