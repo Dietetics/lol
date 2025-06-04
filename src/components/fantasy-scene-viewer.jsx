@@ -39,7 +39,7 @@ export default function FantasySceneViewer() {
 
     return (
         <div className="position-relative w-100 vh-100 d-flex align-items-center justify-content-center">
-            <div className={styles.container}>
+            <div className={`${styles.container} ${isHovered ? styles.sunlightActive : ''}`}>
                 {/* Image de fond */}
                 <img
                     src={fantasyImage1}
@@ -48,6 +48,11 @@ export default function FantasySceneViewer() {
                         isHovered ? styles.fantasyGlow : ""
                     }`}
                 />
+
+                {/* Sunlight effects */}
+                <div className={styles.sunlightOverlay}></div>
+                <div className={styles.sunlightRays}></div>
+                <div className={styles.lightShimmer}></div>
 
                 {/* Focus overlay for blur effect */}
                 <div className={`${styles.focusOverlay} ${isHovered ? styles.fantasyGlow : ''}`}></div>
