@@ -56,17 +56,16 @@ export default function FantasySceneViewer() {
                 >
                     <path
                         d="M1344.6-20.4 861.6-19.8C831.8 8.5 811.4 47.4 797.4 85.7 762.6 197.3 763.4 326.1 744 471.5 735 582.77 726 694.03 717 805.3 722.4 849.7 745.3 899.6 803.2 923.9 813.7 926.07 824.2 928.23 834.7 930.4L1322.6 931C1405.3 911.3 1444.6 813.9 1439.7 695.2 1444.4 570.3 1426.7 445.73 1420.2 321 1395.53 207.33 1383 88.4 1346.8-20.4Z"
-                        fill="rgba(212, 175, 55, 0.15)"
-                        stroke="rgba(212, 175, 55, 0.6)"
-                        strokeWidth="3"
-                        strokeDasharray="10,5"
+                        fill="rgba(255, 255, 255, 0.1)"
+                        stroke="rgba(255, 255, 255, 0.3)"
+                        strokeWidth="2"
                         className={`${styles.hoverPath} ${isHovered ? styles.hoverPathActive : ""}`}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onKeyDown={handleKeyDown}
                         tabIndex={0}
                         role="button"
-                        aria-label="Interactive Fantasy Zone - Click or hover to explore"
+                        aria-label="Zone interactive"
                     />
                 </svg>
 
