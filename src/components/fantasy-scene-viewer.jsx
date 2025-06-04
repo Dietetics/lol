@@ -11,7 +11,9 @@ export default function FantasySceneViewer() {
         // Start background music when component mounts
         if (backgroundMusicRef.current) {
             backgroundMusicRef.current.volume = 0.3;
-            backgroundMusicRef.current.play().catch(e => console.log("Background music play failed:", e));
+            backgroundMusicRef.current
+                .play()
+                .catch((e) => console.log("Background music play failed:", e));
         }
 
         // Cleanup on unmount
@@ -58,7 +60,11 @@ export default function FantasySceneViewer() {
 
             // Resume background music when not hovering
             if (backgroundMusicRef.current) {
-                backgroundMusicRef.current.play().catch(e => console.log("Background music resume failed:", e));
+                backgroundMusicRef.current
+                    .play()
+                    .catch((e) =>
+                        console.log("Background music resume failed:", e),
+                    );
             }
         }
     };
@@ -149,7 +155,10 @@ export default function FantasySceneViewer() {
                         }
                     }}
                 >
-                    <source src="/src/assets/lol-select-music.mp3" type="audio/mpeg" />
+                    <source
+                        src="/src/assets/lol-welcome.mp3"
+                        type="audio/mpeg"
+                    />
                     Your browser does not support the audio element.
                 </audio>
             </div>
