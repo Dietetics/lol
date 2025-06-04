@@ -117,12 +117,12 @@
 
 .hoverPathActive {
     opacity: 1;
-    fill: rgba(255, 255, 255, 0.3);
-    stroke: rgba(212, 175, 55, 0.4);
+    fill: rgba(255, 255, 255, 0.15);
+    stroke: rgba(212, 175, 55, 0.3);
     strokeWidth: 1;
-    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 1))
-            drop-shadow(0 0 60px rgba(255, 255, 255, 0.4))
-            drop-shadow(0 0 100px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6))
+            drop-shadow(0 0 40px rgba(255, 255, 255, 0.2))
+            drop-shadow(0 0 60px rgba(212, 175, 55, 0.4));
     transform: scale(1.05);
     transform-origin: center;
 }
