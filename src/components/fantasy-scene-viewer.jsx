@@ -15,8 +15,11 @@ export default function FantasySceneViewer() {
                 })
             );
 
+            // Play audio immediately with optimized settings
             if (audioRef.current) {
-                audioRef.current.play();
+                audioRef.current.currentTime = 0;
+                audioRef.current.volume = 0.7;
+                audioRef.current.play().catch(e => console.log("Audio play failed:", e));
             }
         }
     };
@@ -91,7 +94,14 @@ export default function FantasySceneViewer() {
                             <audio
                 ref={audioRef}
                 preload="auto"
+                muted={false}
                 style={{ display: "none" }}
+                onCanPlayThrough={() => {
+                    // Audio is ready to play without interruption
+                    if (audioRef.current) {
+                        audioRef.current.volume = 0.7;
+                    }
+                }}
             >
                 <source src="/src/assets/door-open.wav" type="audio/wav" />
                 Your browser does not support the audio element.
