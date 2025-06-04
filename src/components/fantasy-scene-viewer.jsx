@@ -49,6 +49,9 @@ export default function FantasySceneViewer() {
                     }`}
                 />
 
+                {/* Focus overlay for blur effect */}
+                <div className={`${styles.focusOverlay} ${isHovered ? styles.fantasyGlow : ''}`}></div>
+
                 {/* SVG avec zone interactive */}
                 <svg
                     className={styles.svgOverlay}
