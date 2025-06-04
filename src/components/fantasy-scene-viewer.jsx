@@ -1,10 +1,26 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import fantasyImage1 from "../assets/lol.jpg";
 import styles from "../styles/FantasySceneViewer.module.css";
 
 export default function FantasySceneViewer() {
     const [isHovered, setIsHovered] = useState(false);
     const audioRef = useRef(null);
+    const backgroundMusicRef = useRef(null);
+
+    useEffect(() => {
+        // Start background music when component mounts
+        if (backgroundMusicRef.current) {
+            backgroundMusicRef.current.volume = 0.3;
+            backgroundMusicRef.current.play().catch(e => console.log("Background music play failed:", e));
+        }
+
+        // Cleanup on unmount
+        return () => {
+            if (backgroundMusicRef.current) {
+                backgroundMusicRef.current.pause();
+            }
+        };
+    }, []);
 
     const handleMouseEnter = () => {
         if (!isHovered) {
@@ -15,7 +31,12 @@ export default function FantasySceneViewer() {
                 }),
             );
 
-            // Play audio immediately with optimized settings
+            // Stop background music when hovering
+            if (backgroundMusicRef.current) {
+                backgroundMusicRef.current.pause();
+            }
+
+            // Play door sound immediately with optimized settings
             if (audioRef.current) {
                 audioRef.current.currentTime = 0;
                 audioRef.current.volume = 0.7;
@@ -34,6 +55,11 @@ export default function FantasySceneViewer() {
                     detail: { area: "fantasy-chamber-detail" },
                 }),
             );
+
+            // Resume background music when not hovering
+            if (backgroundMusicRef.current) {
+                backgroundMusicRef.current.play().catch(e => console.log("Background music resume failed:", e));
+            }
         }
     };
 
@@ -102,11 +128,28 @@ export default function FantasySceneViewer() {
                     onCanPlayThrough={() => {
                         // Audio is ready to play without interruption
                         if (audioRef.current) {
-                            audioRef.current.volume = 1.7;
+                            audioRef.current.volume = 0.7;
                         }
                     }}
                 >
                     <source src="/src/assets/door-open.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                </audio>
+
+                <audio
+                    ref={backgroundMusicRef}
+                    preload="auto"
+                    loop
+                    muted={false}
+                    style={{ display: "none" }}
+                    onCanPlayThrough={() => {
+                        // Background music is ready to play
+                        if (backgroundMusicRef.current) {
+                            backgroundMusicRef.current.volume = 0.3;
+                        }
+                    }}
+                >
+                    <source src="/src/assets/lol-select-music.mp3" type="audio/mpeg" />
                     Your browser does not support the audio element.
                 </audio>
             </div>
