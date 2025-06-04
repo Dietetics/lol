@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import fantasyImage1 from "../assets/lol.jpg";
 import styles from "../styles/FantasySceneViewer.module.css";
 
 export default function FantasySceneViewer() {
     const [isHovered, setIsHovered] = useState(false);
+    const audioRef = useRef(null);
 
     const handleMouseEnter = () => {
         if (!isHovered) {
@@ -13,6 +14,10 @@ export default function FantasySceneViewer() {
                     detail: { area: "fantasy-chamber-detail" },
                 })
             );
+
+            if (audioRef.current) {
+                audioRef.current.play();
+            }
         }
     };
 
@@ -82,6 +87,15 @@ export default function FantasySceneViewer() {
                 >
                     <span>Hover Area Detected</span>
                 </div>
+
+                            <audio
+                ref={audioRef}
+                preload="auto"
+                style={{ display: "none" }}
+            >
+                <source src="/src/assets/door-open.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+            </audio>
             </div>
 
             {/* Glow ambiance */}
