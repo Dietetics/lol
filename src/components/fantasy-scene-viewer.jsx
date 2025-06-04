@@ -49,10 +49,7 @@ export default function FantasySceneViewer() {
                     }`}
                 />
 
-                {/* Sunlight effects */}
-                <div className={styles.sunlightOverlay}></div>
-                <div className={styles.sunlightRays}></div>
-                <div className={styles.lightShimmer}></div>
+                {/* Sunlight effects removed */}
 
                 {/* Focus overlay for blur effect */}
                 <div className={`${styles.focusOverlay} ${isHovered ? styles.fantasyGlow : ''}`}></div>
