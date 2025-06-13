@@ -1,0 +1,49 @@
+{
+  "guild": "BadBoyz3",
+  "zone": "微区338",
+  "folder": "badBoyz3",
+  "contact": {
+    "type": "联系方式",
+    "value": "zhumage448"
+  },
+  "members": [
+    { "name": "We回来了呜呜", "role": "manager" },
+    { "name": "We回来哟哟哟", "role": "manager" },
+    { "name": "姜丞相", "role": "manager" },
+    { "name": "暴龙喵", "role": "manager" },
+    { "name": "与君诉", "role": "manager" },
+    { "name": "我爱联盟这个游", "role": "manager" },
+
+    { "name": "GRK混乱俱乐部", "role": "elite" },
+    { "name": "下山的王", "role": "elite" },
+    { "name": "FCYCJ", "role": "elite" },
+    { "name": "喝喝茶吧", "role": "elite" },
+    { "name": "彩色的地狱", "role": "elite" },
+    { "name": "缺一把宝刀", "role": "elite" },
+    { "name": "苍茫风口飘忽虾", "role": "elite" },
+    { "name": "沉默许久", "role": "elite" },
+
+    { "name": "嘉和保安", "role": "member" },
+    { "name": "熔铁小羊", "role": "member" },
+    { "name": "燃尽seddx", "role": "member" },
+    { "name": "绝活瑟提", "role": "member" },
+    { "name": "腐团儿哎哟", "role": "member" },
+    { "name": "草莓味的草莓", "role": "member" },
+    { "name": "贝果干", "role": "member" },
+    { "name": "清朗荒原美丽螺", "role": "member" },
+    { "name": "伍岚正", "role": "member" },
+    { "name": "我来你别动", "role": "member" },
+    { "name": "青花瓷戏子", "role": "member" },
+    { "name": "密布绿洲笨重狼", "role": "member" },
+    { "name": "极境王朝", "role": "member" },
+    { "name": "澜翔超级学院", "role": "member" },
+
+    { "name": "Uziddfaker", "role": "temp" },
+    { "name": "月影无双", "role": "temp" },
+    { "name": "深邃风口温厚猪", "role": "temp" },
+    { "name": "为她苦练赛娜", "role": "temp" },
+    { "name": "miruking", "role": "temp" },
+    { "name": "小奶霸", "role": "temp" },
+    { "name": "我会赢的教练", "role": "temp" }
+  ]
+}

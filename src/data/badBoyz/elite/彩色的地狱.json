@@ -1,0 +1,32 @@
+{
+  "选手": "彩色的地狱",
+  "职位": "资深",
+  "入盟时间": "第一期",
+  "状态": "在职",
+  "荣耀": [
+    {
+      "type": "联盟推演",
+      "season": "S16",
+      "title": "MVP",
+      "description": "一人带飞",
+      "image": "src/assets/images/下次一定.jpg",
+      "date": "2025/6/12"
+    },
+    {
+      "type": "联盟推演",
+      "season": "S17",
+      "title": "MVP",
+      "description": "积分榜一",
+      "image": "src/assets/推演/5.17.png",
+      "date": "2025/6/12"
+    },
+    {
+      "type": "联盟推演",
+      "season": "S18",
+      "title": "冠军 MVP",
+      "description": "积分榜一",
+      "image": "src/assets/推演/5.31.png",
+      "date": "2025/6/12"
+    }
+  ]
+}

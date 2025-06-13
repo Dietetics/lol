@@ -1,0 +1,127 @@
+[
+  {
+    "选手": "姜丞相",
+    "职位": "盟主",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  },
+
+  {
+    "选手": "We回来了呜呜",
+    "职位": "代理盟主",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  },
+
+  {
+    "选手": "我爱联盟这个屌游戏",
+    "职位": "副盟主",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  },
+
+  {
+    "选手": "暴龙喵",
+    "职位": "副盟主",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  },
+
+  {
+    "选手": "与君诉",
+    "职位": "管理",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  },
+
+  {
+    "选手": "xx",
+    "职位": "资深",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  },
+
+  {
+    "选手": "yy",
+    "职位": "成员",
+    "入盟时间": "xx",
+    "荣耀": [
+      {
+        "id": 1,
+        "title": "Respect and Communication",
+        "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+      },
+      {
+        "id": 2,
+        "title": "Activity Requirements",
+        "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+      }
+    ]
+  }
+]

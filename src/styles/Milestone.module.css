@@ -1,0 +1,175 @@
+.milestoneContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.milestoneHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    color: #d4af37;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.milestoneContent {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.playerCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.playerCard:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.playerCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #f4e98c, #d4af37);
+}
+
+.playerName {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.playerName h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.honorsSection {
+    margin-top: 1.5rem;
+}
+
+.honorsTitle {
+    color: #d4af37;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.honorsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.honorItem {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 1rem;
+    border-left: 3px solid #d4af37;
+    transition: all 0.3s ease;
+}
+
+.honorItem:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(5px);
+}
+
+.honorIcon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+.honorContent {
+    flex: 1;
+}
+
+.honorTitle {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.honorDescription {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .milestoneContainer {
+        padding: 1rem;
+    }
+    
+    .milestoneContent {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .playerCard {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .playerName h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .milestoneContainer {
+        padding: 0.5rem;
+    }
+    
+    .playerCard {
+        padding: 1rem;
+    }
+    
+    .honorItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .honorIcon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "allianceName": "BadBoyZ",
+  "createdBy": "Alliance Leader",
+  "lastUpdated": "2025-06-04",
+  "rules": [
+    {
+      "id": 1,
+      "title": "Respect and Communication",
+      "description": "All members must treat each other with respect and communicate in a friendly manner. Toxic behavior is not tolerated."
+    },
+    {
+      "id": 2,
+      "title": "Activity Requirements",
+      "description": "Members must log in at least 3 times a week. Inactivity for more than 7 days without notice may lead to removal."
+    },
+    {
+      "id": 3,
+      "title": "Participation in Events",
+      "description": "Participation in alliance wars, events, and tasks is mandatory unless an excuse is provided in advance."
+    },
+    {
+      "id": 4,
+      "title": "Hierarchy and Obedience",
+      "description": "Follow the instructions of the Alliance Leader, Deputy Leader, and Admins. Do not challenge authority in public channels."
+    },
+    {
+      "id": 5,
+      "title": "Donations and Contributions",
+      "description": "Members should regularly donate resources to help the alliance grow. Minimum weekly quota: 500 points."
+    },
+    {
+      "id": 6,
+      "title": "Promotion Rules",
+      "description": "Promotions are based on activity, contribution, and attitude. Do not ask for promotions repeatedly."
+    },
+    {
+      "id": 7,
+      "title": "Conflict Resolution",
+      "description": "Conflicts between members should be reported to management and resolved peacefully. No drama."
+    }
+  ]
+}

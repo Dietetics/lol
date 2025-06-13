@@ -1,0 +1,35 @@
+{
+  "allianceName": "BadBoyZ",
+  "timeline": [
+    {
+      "date": "2025-01-15",
+      "event": "Alliance Created",
+      "description": "The Rising Sun alliance was founded by the first leader, ShadowFox."
+    },
+    {
+      "date": "2025-02-01",
+      "event": "First War Victory",
+      "description": "The alliance won its first war against Zone 331, gaining recognition and rewards."
+    },
+    {
+      "date": "2025-03-10",
+      "event": "Leadership Change",
+      "description": "Vice Leader NightWolf was promoted to Acting Leader after ShadowFox’s departure."
+    },
+    {
+      "date": "2025-04-05",
+      "event": "New Member Record",
+      "description": "Reached 100 active members for the first time."
+    },
+    {
+      "date": "2025-05-01",
+      "event": "Alliance Merge",
+      "description": "Merged with 'Silver Blades' alliance from Server 335, gaining 20+ new veterans."
+    },
+    {
+      "date": "2025-06-01",
+      "event": "New Rules Published",
+      "description": "Updated alliance rules to reflect new activity and contribution expectations."
+    }
+  ]
+}

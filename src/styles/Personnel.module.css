@@ -1,0 +1,649 @@
+.personnelContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.personnelHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.tableControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.searchContainer {
+    flex: 1;
+    max-width: 400px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.controlsRight {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.itemsPerPageSelect {
+    padding: 0.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    background: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.itemsPerPageSelect:hover {
+    background: rgba(40, 40, 40, 0.9);
+    border-color: #d4af37;
+}
+
+.itemsPerPageSelect:focus {
+    outline: none;
+    background: rgba(40, 40, 40, 0.9);
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.itemsPerPageSelect option {
+    background: #2a2a2a;
+    color: #d4af37;
+    padding: 0.5rem;
+}
+
+.resultsInfo {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.sortableHeader {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.sortableHeader:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-1px);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.paginationButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageNumbers {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.pageNumber {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pageNumber:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
+}
+
+.activePage {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.2));
+    border-color: #d4af37;
+    color: #d4af37;
+    font-weight: 600;
+}
+
+.noResults {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+.title {
+    color: #d4af37;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.helpButton {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.6));
+    border: 2px solid rgba(212, 175, 55, 0.9);
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.helpButton:hover {
+    background: linear-gradient(135deg, #d4af37, rgba(212, 175, 55, 0.8));
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modalContent {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(25, 25, 25, 0.95));
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem 1rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.modalHeader h3 {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.modalCloseButton {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2rem;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modalCloseButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.modalBody {
+    padding: 1.5rem 2rem 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.modalSections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.modalSection {
+    flex: 1;
+}
+
+.sectionTitle {
+    color: #d4af37;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.modalBody h4 {
+    color: #d4af37;
+    font-size: 1rem;
+    margin: 1.2rem 0 0.8rem;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.modalSection h4:first-of-type {
+    margin-top: 0;
+}
+
+.modalBody ul {
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.modalBody li {
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.modalBody li strong {
+    color: #d4af37;
+    font-weight: 600;
+}
+
+.personnelTable {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.headerCell {
+    padding: 1.2rem 1rem;
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tableRow:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.playerCell,
+.positionCell,
+.dateCell,
+.honorCell {
+    padding: 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.honorCount {
+    /* Base styles - colors will be overridden by inline styles */
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid;
+    min-width: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.honorCount:hover {
+    transform: scale(1.05);
+}
+
+.playerName {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.positionBadge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.positionLeader {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: #ffffff;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+}
+
+.positionActingLeader {
+    background: linear-gradient(135deg, #ff9ff3, #f368e0);
+    color: #ffffff;
+    border-color: #ff9ff3;
+    box-shadow: 0 0 15px rgba(255, 159, 243, 0.3);
+}
+
+.positionViceLeader {
+    background: linear-gradient(135deg, #feca57, #ff9ff3);
+    color: #1a1a1a;
+    border-color: #feca57;
+    box-shadow: 0 0 15px rgba(254, 202, 87, 0.3);
+}
+
+.positionAdmin {
+    background: linear-gradient(135deg, #48dbfb, #0abde3);
+    color: #ffffff;
+    border-color: #48dbfb;
+    box-shadow: 0 0 15px rgba(72, 219, 251, 0.3);
+}
+
+.positionSenior {
+    background: linear-gradient(135deg, #1dd1a1, #10ac84);
+    color: #ffffff;
+    border-color: #1dd1a1;
+    box-shadow: 0 0 15px rgba(29, 209, 161, 0.3);
+}
+
+.positionMember {
+    background: linear-gradient(135deg, #a4b0be, #747d8c);
+    color: #ffffff;
+    border-color: #a4b0be;
+    box-shadow: 0 0 15px rgba(164, 176, 190, 0.2);
+}
+
+.dateCell {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .personnelContainer {
+        padding: 1rem;
+    }
+
+    .tableControls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .searchContainer {
+        max-width: none;
+    }
+
+    .controlsRight {
+        justify-content: center;
+    }
+
+    .resultsInfo {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .pageNumbers {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tableHeader,
+    .tableRow {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .tableRow {
+        background: rgba(255, 255, 255, 0.03);
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .headerCell {
+        display: none;
+    }
+
+    .playerCell,
+    .positionCell,
+    .dateCell,
+    .honorCell {
+        padding: 0.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+    }
+
+    .playerCell::before {
+        content: '选手: ';
+        color: #d4af37;
+        font-weight: 600;
+    }
+
+    .positionCell::before {
+        content: '职位: ';
+        color: #d4af37;
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+
+    .dateCell::before {
+        content: '入盟时间: ';
+        color: #d4af37;
+        font-weight: 600;
+    }
+
+    .honorCell::before {
+        content: '荣耀数量: ';
+        color: #d4af37;
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+
+    .positionCell {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .helpButton {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0;
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
+    .personnelHeader {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .modalContent {
+        width: 95%;
+        max-height: 90%;
+    }
+
+    .modalHeader {
+        padding: 1rem 1.5rem 0.8rem;
+    }
+
+    .modalHeader h3 {
+        font-size: 1.3rem;
+    }
+
+    .modalBody {
+        padding: 1rem 1.5rem 1.5rem;
+    }
+
+    .modalSections {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.1rem;
+    }
+
+    .modalBody h4 {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .personnelContainer {
+        padding: 0.5rem;
+    }
+
+    .playerCell,
+    .positionCell,
+    .dateCell,
+    .honorCell {
+        padding: 0.6rem;
+    }
+
+    .positionBadge {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitleRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .subtitleRow {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+}

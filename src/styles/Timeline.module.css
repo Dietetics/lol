@@ -1,0 +1,120 @@
+
+.timelineContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.timelineHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.allianceName {
+    color: #d4af37;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.timelineContent {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timelineContent::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #d4af37, rgba(212, 175, 55, 0.3));
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border-left: 4px solid #d4af37;
+    transition: all 0.3s ease;
+}
+
+.timelineItem:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+}
+
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 1.5rem;
+    width: 12px;
+    height: 12px;
+    background: #d4af37;
+    border-radius: 50%;
+    border: 3px solid rgba(26, 26, 46, 1);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.timelineDate {
+    color: #d4af37;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.eventTitle {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.eventDescription {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .timelineContainer {
+        padding: 1rem;
+    }
+    
+    .timelineContent {
+        padding-left: 1.5rem;
+    }
+    
+    .timelineContent::before {
+        left: 0.75rem;
+    }
+    
+    .timelineItem::before {
+        left: -2rem;
+    }
+    
+    .allianceName {
+        font-size: 1.5rem;
+    }
+    
+    .eventTitle {
+        font-size: 1.1rem;
+    }
+}

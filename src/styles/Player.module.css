@@ -1,0 +1,303 @@
+.playerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.playerHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.playerName {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.playerBasicInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.positionBadge {
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.positionLeader {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: #ffffff;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+}
+
+.positionActingLeader {
+    background: linear-gradient(135deg, #ff9ff3, #f368e0);
+    color: #ffffff;
+    border-color: #ff9ff3;
+    box-shadow: 0 0 15px rgba(255, 159, 243, 0.3);
+}
+
+.positionViceLeader {
+    background: linear-gradient(135deg, #feca57, #ff9ff3);
+    color: #1a1a1a;
+    border-color: #feca57;
+    box-shadow: 0 0 15px rgba(254, 202, 87, 0.3);
+}
+
+.positionManager {
+    background: linear-gradient(135deg, #48dbfb, #0abde3);
+    color: #ffffff;
+    border-color: #48dbfb;
+    box-shadow: 0 0 15px rgba(72, 219, 251, 0.3);
+}
+
+.positionSenior {
+    background: linear-gradient(135deg, #1dd1a1, #10ac84);
+    color: #ffffff;
+    border-color: #1dd1a1;
+    box-shadow: 0 0 15px rgba(29, 209, 161, 0.3);
+}
+
+.positionMember {
+    background: linear-gradient(135deg, #a4b0be, #747d8c);
+    color: #ffffff;
+    border-color: #a4b0be;
+    box-shadow: 0 0 15px rgba(164, 176, 190, 0.2);
+}
+
+.positionTemp {
+    background: linear-gradient(135deg, #dda0dd, #9370db);
+    color: #ffffff;
+    border-color: #dda0dd;
+    box-shadow: 0 0 15px rgba(221, 160, 221, 0.2);
+}
+
+.joinDate, .status {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+.playerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.statsSection {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.statCard {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.honorsSection {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.honorsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.honorCard {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.honorCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.honorType {
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.honorContent {
+    padding: 1.5rem;
+}
+
+.honorImageContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.honorImage {
+    max-width: 100%;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.honorImage:hover {
+    transform: scale(1.05);
+}
+
+.honorTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.honorSeason {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.honorDescription {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.honorDate {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.noHonors {
+    text-align: center;
+    padding: 3rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .playerContainer {
+        padding: 1rem;
+    }
+
+    .playerName {
+        font-size: 2rem;
+    }
+
+    .playerBasicInfo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .honorsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .playerContainer {
+        padding: 0.5rem;
+    }
+
+    .playerHeader {
+        padding: 1rem;
+    }
+
+    .statsSection, .honorsSection {
+        padding: 1rem;
+    }
+
+    .honorContent {
+        padding: 1rem;
+    }
+}
+.status {
+    background-image: url('../../assets/images/lol.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+}
+
+.totalHonor {
+    color: #d4af37;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
